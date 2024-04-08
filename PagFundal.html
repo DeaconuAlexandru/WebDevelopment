@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Acesta este site-ul meu - Sper să vă placă</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="banner">
+    <div class="navbar">
+      <div class="logo-container">
+        <img src="logo.png" class="logo" id="logo">
+      </div>
+      <ul>
+        <li><a href="Home Informations.html">Home</a></li> 
+        <li><a href="Bedroom Informations.html">Bedroom</a></li>
+        <li><a href="Dining%20Informations.html">Dining</a></li>
+        <li><a href="Kitchen%20Informations.html">Kitchen</a></li>
+        <li><a href="Backyard%20Informations.html">Backyard</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="content">
+    <h1 id="title">Fă-ți casa cum vrei tu</h1>
+    <p id="subtitle">Fii tu proprietarul propriei tale case/apartament</p>
+    <div id="image-container">
+      <!-- Adăugăm containerul pentru imagini -->
+      <img src="Home.jpg" alt="Home Image">
+    </div>
+    <div>
+      <button type="button" class="btn-1" onclick="redirectCreditOrFirstHouse()">Înscrie-te la prima ta casă/Ia-ți credit pe 30 de ani<span></span></button>
+      <button type="button" class="btn-2" onclick="redirectInvestments()">Investește unde poți, devino bogat și ia-ți ce vrei tu<span></span></button>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    function redirectCreditOrFirstHouse() {
+      window.location.href = "Credit or First House Informations.html";
+    }
+
+    function redirectInvestments() {
+      window.location.href = "Invest where you can, get rich and get what you want Informations.html";
+    }
+  </script>
+</body>
+</html>

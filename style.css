@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar {
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #606060; /* Schimbarea culorii de fundal în gri */
+  border-bottom: 2px solid #fff; /* Adăugarea unei linii de separare */
+}
+.logo-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.logo {
+  width: 120px;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+.logo:hover {
+  transform: scale(1.1); /* Mărește logo-ul la hover */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Accentuează umbrele */
+}
+.navbar ul li {
+  list-style: none; /* corrected */
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff; /* Schimbarea culorii textului */
+  text-transform: uppercase;
+  font-weight: bold; /* Adăugarea unui stil îngroșat */
+}
+.navbar ul li:hover a {
+  color: #ffcc00; /* Schimbarea culorii textului la hover */
+}
+
+.navbar ul li::after {
+  content: '';
+  height: 3px;
+  width: 0;
+  background: #ffcc00; /* Schimbarea culorii indicatorului de subliniere */
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: width 0.5s;
+    transform-origin: right;
+}
+.navbar ul li:hover::after {
+  width: 100%;
+}
+.navbar ul li.active::after {
+  width: 100%;
+      transform-origin: left;
+}
+
+.content {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: aqua;
+}
+
+button {
+    width: 250px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: blue;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+button:hover {
+    background-color: #009688;
+    color: white;
+    border-color: #009688;
+}
+button span {
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span {
+    width: 100%;
+    border: none;
+}
+
+#title {
+  color: aqua; /* Culori de bază pentru titlu */
+  transition: color 0.5s; /* Efect de tranziție pentru culoare */
+  animation: bounce 1s infinite alternate; /* Animare GSAP pentru oscilație */
+}
+
+#subtitle {
+  color: aqua; /* Culori de bază pentru subtitlu */
+  transition: color 0.5s; /* Efect de tranziție pentru culoare */
+  animation: bounce 1s infinite alternate; /* Animare GSAP pentru oscilație */
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes glowing {
+  0% {
+    background-color: aqua;
+  }
+  50% {
+    background-color: #0cf; /* Cyan mai puțin strălucitor */
+  }
+  100% {
+    background-color: aqua;
+  }
+}
+#image-container {
+  margin-top: 20px; /* Spațiu deasupra containerului de imagini */
+  display: flex;
+  justify-content: center;
+}
+#image-container img {
+  max-width: 100%; /* Imaginea să nu depășească lățimea containerului */
+  max-height: 400px; /* Înălțime maximă pentru imagine */
+  border: 2px solid #009688; /* Adăugăm un chenar pentru imagine */
+  border-radius: 10px; /* Rotunjim colțurile chenarului */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adăugăm o umbră */
+}
